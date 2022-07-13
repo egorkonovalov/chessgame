@@ -2,50 +2,11 @@
 import { ref } from "vue";
 
 import { File, Rank } from "../utils/structs/sets"
+import { Game } from "../utils/structs/game"
 
 import { Position } from "../utils/structs/position";
 import { Piece } from "../utils/structs/piece"
 
-import { Bishop } from "../utils/structs/pieces/bishop"
-import { King } from "../utils/structs/pieces/king"
-import { Knight } from "../utils/structs/pieces/knight"
-import { Pawn } from "../utils/structs/pieces/pawn"
-import { Queen } from "../utils/structs/pieces/queen"
-import { Rook } from "../utils/structs/pieces/rook"
-
-
-class Game {
-  private pieces = Game.makePieces();
-  private static makePieces() {
-    return [
-      //Kings
-      new King("White", "E", 1),
-      new King("Black", "E", 8),
-
-      //Queens
-      new Queen("White", "D", 1),
-      new Queen("Black", "D", 8),
-
-      //Bishops
-      new Bishop("White", "C", 1),
-      new Bishop("Black", "C", 8),
-      new Bishop("White", "F", 1),
-      new Bishop("Black", "F", 8),
-
-      //Rooks
-      new Rook("White", "A", 1),
-      new Rook("Black", "A", 8),
-      new Rook("White", "H", 1),
-      new Rook("Black", "H", 8),
-
-      //Knights
-      new Knight("White", "B", 1),
-      new Knight("Black", "B", 8),
-      new Knight("White", "G", 1),
-      new Knight("Black", "G", 8),
-    ];
-  }
-}
 
 const game = new Game();
 let letters = ["A", "B", "C", "D", "E", "F", "G", "H"];
