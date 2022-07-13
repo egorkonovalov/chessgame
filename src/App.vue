@@ -6,5 +6,5 @@ import ChessGame from "./components/ChessGame.vue";
 </script>
 
 <template>
-  <ChessGame msg="Hello Vue 3 + TypeScript + Vite" />
+  <ChessGame/>
 </template>
